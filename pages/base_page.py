@@ -66,5 +66,8 @@ class BasePage:
         assert self.is_element_present(*BasePageLocators.GO_TO_BASKET_FORM), "Go to backet form is not presented"
         button = self.browser.find_element(*BasePageLocators.GO_TO_BASKET_FORM)
         button.click()
-
         time.sleep(1)
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"
