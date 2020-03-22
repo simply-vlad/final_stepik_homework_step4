@@ -4,7 +4,7 @@
 
 Прри написании тестового проекта использовался Python 3.8.0, selenium 3.141.0
 
-Проект написан в среде разработки PyCharmЖ
+Проект написан в среде разработки PyCharm:
 PyCharm 2019.3.4 (Community Edition)
 Build #PC-193.6911.25, built on March 18, 2020
 Runtime version: 11.0.6+8-b520.43 amd64
