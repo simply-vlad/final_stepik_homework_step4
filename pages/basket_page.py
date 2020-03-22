@@ -1,6 +1,5 @@
 from .base_page import BasePage
 from .locators import BasketPageLocators
-from selenium.webdriver.common.by import By
 
 
 class BasketPage(BasePage):
@@ -10,5 +9,5 @@ class BasketPage(BasePage):
            "Basket is empty"
 
     def should_be_basket_empty_text(self):
-        assert self.is_element_present(*BasketPageLocators.BACSKET_EMPTY), \
+        assert self.is_element_present(*BasketPageLocators.BASKET_EMPTY), \
            "Basket is empty"

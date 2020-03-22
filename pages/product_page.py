@@ -5,6 +5,9 @@ import time
 
 
 class ProductPage(BasePage):
+    def should_be_add_to_basket_form(self):
+        assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET_FORM), "Add to backet form is not presented"
+
     def click_add_to_basket_form(self):
         assert self.is_element_present(*ProductPageLocators.ADD_TO_BASKET_FORM), "Add to backet form is not presented"
         button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_FORM)

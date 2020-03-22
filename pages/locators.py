@@ -32,4 +32,4 @@ class BasePageLocators():
 
 class BasketPageLocators():
     BASKET_ITEMS = (By.CSS_SELECTOR, "div.basket-items")
-    BACSKET_EMPTY = (By.CSS_SELECTOR, "div#content_inner>p")
+    BASKET_EMPTY = (By.CSS_SELECTOR, "div#content_inner>p")

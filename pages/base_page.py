@@ -9,6 +9,7 @@ import time
 
 
 class BasePage:
+
     def __init__(self, browser, url, timeout=10):
         self.browser = browser
         self.url = url
@@ -20,7 +21,7 @@ class BasePage:
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
-        except (NoSuchElementException):
+        except NoSuchElementException:
             return False
         return True
 
@@ -32,7 +33,8 @@ class BasePage:
         alert.accept()
         try:
             alert = self.browser.switch_to.alert
-            print("Your code: {}".format(alert.text))
+            alert_text = alert.text
+            print(f"Your code: {alert_text}")
             alert.accept()
         except NoAlertPresentException:
             print("No second alert presented")
@@ -62,8 +64,8 @@ class BasePage:
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
 
-    def go_to_backet_page(self):
-        assert self.is_element_present(*BasePageLocators.GO_TO_BASKET_FORM), "Go to backet form is not presented"
+    def go_to_basket_page(self):
+        assert self.is_element_present(*BasePageLocators.GO_TO_BASKET_FORM), "Go to basket form is not presented"
         button = self.browser.find_element(*BasePageLocators.GO_TO_BASKET_FORM)
         button.click()
         time.sleep(1)

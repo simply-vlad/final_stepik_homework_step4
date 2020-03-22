@@ -27,7 +27,7 @@ def test_guest_cant_see_product_in_basket_opened_from_main_page(browser):
     page = MainPage(browser, link)
     page.open()
     # Переходит в корзину по кнопке в шапке сайта
-    page.go_to_backet_page()
+    page.go_to_basket_page()
     basket_page = BasketPage(browser, browser.current_url)
     # Ожидаем, что в корзине нет товаров
     basket_page.should_not_be_product_in_basket()
